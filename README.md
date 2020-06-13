@@ -3,7 +3,7 @@ Simple web_scraper to scrap img form https://pngtree.com for given keyword input
 
 Before using set the path to save the image file on line 23
 - Example :-
- - "C:\Users\Entity\Documents\"
+ -- "C:\Users\Entity\Documents\"
 
 Requirements
  - Bs4 
