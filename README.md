@@ -6,9 +6,5 @@ Before using the scraper set a path to save the image file on line 23 of the cod
 For example :- "C:\Users\YOUR-USERNAME-HERE\Documents\"
 
 Requirements
- - Bs4 
-    - Use "pip install bs4" to get module
-   
-   
- - urllib
-    - Use "pip install urllib" to get module
+ * urllib
+ * bs4
