@@ -1,9 +1,8 @@
 import urllib.request
 from bs4 import BeautifulSoup as bsp
-from os.path import join
+import requests
 
 samp_url = "https://pngtree.com/so/"
-
 
 item_ = input("Enter item name :  ")
 url = samp_url+str(item_)
@@ -14,18 +13,19 @@ que = urllib.request.Request(url, headers = headers)
 req = urllib.request.urlopen(que)
 
 html_par = bsp(req.read(),"html.parser")
-oru_li = html_par.findAll("li",{"class":"li-box search_keyword_statis_js"})
 
-
-
+oru_li = html_par.findAll("li",{"class": "li-box search_keyword_statis_js"})
+count = 0
 for index,li in enumerate(oru_li):
     filename_ = str(index+1)+".jpeg"
-    path = r""# set a path to store the Downloaded images
-    filename_path = join(path,filename_)
+    try:
+        r = requests.get(li.div.a["data-media"])
+        with open(filename_, 'wb') as outfile:
+            outfile.write(r.content)
+        print(str(li.div.a["data-media"]),"Downloaded Sucessfuly !!")
+        count += 1
+    except:
+        pass
     
-
-
-    urllib.request.urlretrieve(str(li.img["data-original"]),filename_path)
-    print(str(li.img["data-original"]),"Downloaded Sucessfuly !!")
-
+print("Total",count,"files downloaded")
 
