@@ -9,8 +9,8 @@ $ python pyGrab.py<br>
 <br>
 
 
-<br>
-Requirements
- * urllib
- * bs4
- * requests
+ <br>
+Requirements <br>
+* urllib
+* bs4
+* requests
