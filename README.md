@@ -1,5 +1,5 @@
-# web_scraper_with_python
-Grabimg is a simple web scraper which scraps images form https://pngtree.com for given keyword input. 
+# pyGrab
+pyGrab is a simple web scraper which scraps images form https://pngtree.com for given keyword input. 
 
 Usage : <br>
 $ git clone https://github.com/vijayvarghese/web_scraper_with_python.git <br>
