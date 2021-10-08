@@ -11,6 +11,6 @@ $ python pyGrab.py<br>
 
  <br>
 Requirements <br>
-* urllib
-* bs4
-* requests
+* urllib<br>
+* bs4<br>
+* requests<br>
